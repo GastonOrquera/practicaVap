@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-one: "Oswald", sans-serif;
+}
+
+header {
+    background-color: #FFFFFF;
+    padding: .8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .imgLogo {
+    background-image: url(logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 4rem;
+    width: 12rem;
+}
+
+
+
+header nav ul {
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-family: var(--font-one);
+    text-transform: uppercase;
+    letter-spacing: .050rem;
+    color: rgb(20, 20, 20);
+
+    transition: 2s cubic-bezier(0.5, 0, 0, 12) ease-in;
+}
+
+header nav ul li a:hover {
+    color: #1C569F;
+}
+
+header nav ul .barra {
+    font-family: var(--font-one);
+    color: #1C569F;
+    position: relative;
+    font-size: 1.4rem;
+}
+
+header nav ul .hr-nav {
+    display: none;
+}
+
+header .hamburger {
+    /* background-color: black; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+
+}
+
+header .hamburger div {
+    width: 16px;
+    height: 2px;
+    background-color: #14172b;
+}
+
+
+/* header .conteinerRedes {
+    
+    
+    right: 38%;
+    top: 6.40%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+} */
+
+header .conteinerRedes {
+    display: flex;
+    gap: 2rem;
+}
+
+header .conteinerRedes i {
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+header .conteinerRedes i:hover {
+    color: #1C569F;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    header {
+        padding: .6rem 1rem;
+    }
+
+    header .hamburger {
+        display: flex;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header nav.active {
+        display: flex;
+        position: absolute;
+        padding: .6rem 1rem;
+        width: 100%;
+        top: 5.1rem;
+        left: 0;
+        right: 0;
+        background-color: #1c579f28;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: start;
+        gap: .8rem;
+        width: 100%;
+    }
+
+    header nav ul .barra {
+        display: none;
+    }
+
+    header nav ul .hr-nav {
+        display: block;
+        border-color: #1C569F;
+        width: 100%;
+    }
+
+    header .conteinerRedes {
+        display: none;
+    }
+
+    header .conteinerRedes.active {
+        /* background-color: blue; */
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+        gap: 0;
+        width: 26%;
+    }
+
+}
